@@ -427,36 +427,48 @@
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .ft-input-prefix {
   position: absolute;
   left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
   font-weight: 600;
   font-size: 0.9rem;
   color: var(--ft-text-muted);
   pointer-events: none;
+  z-index: 2;
+  user-select: none;
+  line-height: 1;
 }
 
+.ft-input.ft-input-with-prefix,
 .ft-input-with-prefix {
-  padding-left: 44px;
+  padding-left: 48px !important;
 }
 
 .ft-input-with-icon-wrap {
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .ft-input-icon {
   position: absolute;
-  left: 12px;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
   color: var(--ft-text-light);
   pointer-events: none;
+  z-index: 2;
 }
 
+.ft-input.ft-input-icon-pad,
 .ft-input-icon-pad {
-  padding-left: 38px;
+  padding-left: 42px !important;
 }
 
 .ft-amount-preview {

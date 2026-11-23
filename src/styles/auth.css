@@ -141,15 +141,15 @@
   display: block;
 }
 
-/* Input Fields */
-.ft-input-with-icon-wrap {
+/* Auth Input Fields (Scoped to Auth Card) */
+.ft-auth-card .ft-input-with-icon-wrap {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
 }
 
-.ft-input {
+.ft-auth-card .ft-input {
   width: 100%;
   height: 42px;
   padding: 0 14px;
@@ -162,30 +162,30 @@
   box-sizing: border-box;
 }
 
-.ft-input::placeholder {
+.ft-auth-card .ft-input::placeholder {
   color: #94A3B8;
 }
 
-.ft-input:hover {
+.ft-auth-card .ft-input:hover {
   border-color: #94A3B8;
 }
 
-.ft-input:focus {
+.ft-auth-card .ft-input:focus {
   border-color: var(--ft-primary, #3478F6);
   box-shadow: 0 0 0 3px rgba(52, 120, 246, 0.14);
   outline: none;
 }
 
-.ft-input-error {
+.ft-auth-card .ft-input-error {
   border-color: #EF4444 !important;
 }
 
-.ft-input-error:focus {
+.ft-auth-card .ft-input-error:focus {
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.14) !important;
 }
 
 /* Icon & Padding Styling */
-.ft-input-icon {
+.ft-auth-card .ft-input-icon {
   position: absolute;
   left: 14px;
   top: 50%;
@@ -199,18 +199,16 @@
 }
 
 .ft-auth-card .ft-input.ft-input-icon-pad,
-.ft-input.ft-input-icon-pad,
-.ft-input-icon-pad {
+.ft-auth-card .ft-input-icon-pad {
   padding-left: 42px !important;
 }
 
 .ft-auth-card .ft-input.ft-input-password-pad,
-.ft-input.ft-input-password-pad,
-.ft-input-password-pad {
+.ft-auth-card .ft-input-password-pad {
   padding-right: 42px !important;
 }
 
-.ft-password-toggle-btn {
+.ft-auth-card .ft-password-toggle-btn {
   position: absolute;
   right: 12px;
   top: 50%;
@@ -228,7 +226,7 @@
   transition: color 0.15s ease;
 }
 
-.ft-password-toggle-btn:hover {
+.ft-auth-card .ft-password-toggle-btn:hover {
   color: var(--ft-text-title, #1E293B);
 }
 
