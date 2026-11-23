@@ -1,0 +1,388 @@
+/* FinTrack - Authentication Styles (Modern Minimal Light Theme) */
+
+.ft-auth-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F8FAFC;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(52, 120, 246, 0.04) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(52, 120, 246, 0.03) 0px, transparent 50%);
+  padding: 32px 16px;
+  box-sizing: border-box;
+}
+
+.ft-auth-card {
+  width: 100%;
+  max-width: 440px;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.02), 0 10px 25px -5px rgba(15, 23, 42, 0.06);
+  padding: 36px 32px 30px;
+  display: flex;
+  flex-direction: column;
+  animation: ftAuthCardFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+@keyframes ftAuthCardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Brand Header */
+.ft-auth-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.ft-auth-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  text-decoration: none;
+}
+
+.ft-auth-brand-icon {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, var(--ft-primary, #3478F6) 0%, #1D4ED8 100%);
+  color: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(52, 120, 246, 0.24);
+}
+
+.ft-auth-brand-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--ft-text-title, #0F172A);
+  letter-spacing: -0.025em;
+}
+
+.ft-auth-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ft-text-title, #0F172A);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.ft-auth-subtitle {
+  font-size: 0.84rem;
+  color: var(--ft-text-muted, #64748B);
+  margin-top: 6px;
+  line-height: 1.45;
+}
+
+/* Error Alert Box */
+.ft-auth-error-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  background-color: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: 8px;
+  color: #DC2626;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  animation: ftFadeIn 0.2s ease-out;
+}
+
+.ft-auth-error-icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Auth Form */
+.ft-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ft-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ft-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ft-text-title, #1E293B);
+  line-height: 1.2;
+}
+
+.ft-required {
+  color: #EF4444;
+}
+
+.ft-form-error {
+  font-size: 0.74rem;
+  color: #DC2626;
+  margin-top: 2px;
+  display: block;
+}
+
+/* Input Fields */
+.ft-input-with-icon-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.ft-input-icon {
+  position: absolute;
+  left: 12px;
+  color: #94A3B8;
+  pointer-events: none;
+}
+
+.ft-input-icon-pad {
+  padding-left: 38px;
+}
+
+.ft-input-password-pad {
+  padding-right: 40px;
+}
+
+.ft-input {
+  width: 100%;
+  height: 42px;
+  padding: 0 14px;
+  font-size: 0.88rem;
+  color: var(--ft-text-title, #0F172A);
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  box-sizing: border-box;
+}
+
+.ft-input::placeholder {
+  color: #94A3B8;
+}
+
+.ft-input:hover {
+  border-color: #94A3B8;
+}
+
+.ft-input:focus {
+  border-color: var(--ft-primary, #3478F6);
+  box-shadow: 0 0 0 3px rgba(52, 120, 246, 0.14);
+  outline: none;
+}
+
+.ft-input-error {
+  border-color: #EF4444 !important;
+}
+
+.ft-input-error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.14) !important;
+}
+
+.ft-password-toggle-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.ft-password-toggle-btn:hover {
+  color: var(--ft-text-title, #1E293B);
+}
+
+/* Remember Me Checkbox */
+.ft-auth-options-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -2px;
+  margin-bottom: 2px;
+}
+
+.ft-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #475569;
+  font-size: 0.82rem;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+}
+
+.ft-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--ft-primary, #3478F6);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Submit Button */
+.ft-auth-submit-btn {
+  width: 100%;
+  height: 44px;
+  margin-top: 4px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(52, 120, 246, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.18s ease;
+}
+
+.ft-auth-submit-btn:hover {
+  box-shadow: 0 4px 14px rgba(52, 120, 246, 0.32);
+  transform: translateY(-1px);
+}
+
+.ft-auth-submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Auth Footer */
+.ft-auth-footer {
+  text-align: center;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #F1F5F9;
+}
+
+.ft-auth-footer-text {
+  font-size: 0.84rem;
+  color: #64748B;
+  margin: 0;
+}
+
+.ft-auth-link {
+  font-weight: 600;
+  color: var(--ft-primary, #3478F6);
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 4px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  font-size: 0.84rem;
+}
+
+.ft-auth-link:hover {
+  color: #1D4ED8;
+  text-decoration: underline;
+}
+
+/* Splash Loader */
+.ft-splash-loader {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: var(--ft-bg-body, #F8FAFC);
+}
+
+.ft-splash-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #E2E8F0;
+  border-top-color: var(--ft-primary, #3478F6);
+  border-radius: 50%;
+  animation: ftSpin 0.7s linear infinite;
+}
+
+.ft-splash-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ft-text-muted, #64748B);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 480px) {
+  .ft-auth-container {
+    padding: 16px 12px;
+    align-items: center;
+  }
+
+  .ft-auth-card {
+    padding: 26px 20px 22px;
+    border-radius: 14px;
+  }
+
+  .ft-auth-header {
+    margin-bottom: 20px;
+  }
+
+  .ft-auth-brand {
+    margin-bottom: 12px;
+  }
+
+  .ft-auth-brand-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .ft-auth-brand-title {
+    font-size: 1.25rem;
+  }
+
+  .ft-auth-title {
+    font-size: 1.15rem;
+  }
+
+  .ft-auth-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .ft-auth-form {
+    gap: 14px;
+  }
+
+  .ft-input {
+    height: 40px;
+    font-size: 0.86rem;
+  }
+
+  .ft-auth-submit-btn {
+    height: 42px;
+    font-size: 0.88rem;
+  }
+
+  .ft-auth-footer {
+    margin-top: 20px;
+    padding-top: 16px;
+  }
+}
