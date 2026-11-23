@@ -6,12 +6,10 @@ import { Button } from '../../components/common/Button';
 export const LoginPage: React.FC = () => {
   const { login, setAuthView, isLoading } = useAuth();
 
-  const [email, setEmail] = useState(() => {
-    return localStorage.getItem('fintrack_remember_email_v1') || '';
-  });
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
-  const [rememberMe, setRememberMe] = useState(true);
+  const [rememberMe, setRememberMe] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [emailError, setEmailError] = useState<string | null>(null);
   const [passwordError, setPasswordError] = useState<string | null>(null);
